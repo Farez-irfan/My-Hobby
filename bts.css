@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Georgia', serif;
+  background-color: #111;
+  background: url('./asstes/Assets/download.jpg') center/cover no-repeat;
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: 70px;
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+    background-color: rgba(0, 0, 0, 0);
+    height: 70px;
+    box-sizing: border-box;
+}
+
+.logo img {
+    width: 80px;
+    height: auto;
+    cursor: pointer;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #00A2E3;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+  color: #aaa;
+}
+
+.intro-text {
+  padding: 80px 50px 40px;
+  text-align: center;
+  border-bottom: 1px solid #33333300;
+  min-height: 200px;
+}
+
+#typewriter {
+  font-size: 20px;
+  max-width: 800px;
+  margin: auto;
+  white-space: pre-line;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 10px;
+  background-color: #000;
+  flex: 1;
+}
+
+.gallery img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border: 2px solid #333;
+  transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background: black;
+    width: 100%;
+}

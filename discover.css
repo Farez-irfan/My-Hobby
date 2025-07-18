@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Georgia', serif;
+  background-color: #000;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  min-width: 1920px;
+  min-height: 1200px;
+  background-image: url('./asstes/5 BG/img 1.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  transition: background-image 0.8s ease-in-out;
+}
+
+/* Overlay */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: transparent;
+  height: 70px;
+}
+
+.logo img {
+  width: 80px;
+  height: auto;
+  cursor: pointer;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav-menu a:hover {
+  color: #aaa;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 120px 80px 0; /* Top spacing to clear navbar */
+  height: calc(100vh - 120px); /* Account for footer height */
+}
+
+/* Hero Section */
+.hero-text {
+  max-width: 750px;
+  margin-bottom: 30px;
+}
+
+.hero-text h1 span {
+  font-size: 2em; /* 50% smaller */
+  font-weight: 900;
+  letter-spacing: 1px;
+  display: block;
+}
+
+.hero {
+  margin-top: 2%;  /* Shift upward by ~20% of original layout center */
+}
+
+.hero-text p {
+  margin: 25px 0;
+  line-height: 1.6;
+  font-size: 1.05em;
+  color: #f1f1f1;
+}
+
+.btn {
+  display: inline-block;
+  background: white;
+  color: black;
+  padding: 14px 28px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #ddd;
+}
+
+/* Image Grid */
+.image-grid {
+  display: flex;
+  gap: 30px;
+}
+
+.image {
+  width: 208px;  /* 160px + 30% = 208px */
+  height: 260px; /* 200px + 30% = 260px */
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: black;
+  color: white;
+  display: flex;
+  align-items: flex-end; /* Stick content to the bottom */
+  justify-content: center;
+  padding-bottom: 20px;  /* Smaller visible area */
+  font-size: 0.9em;
+}
+
+.image {
+  width: 208px;
+  height: 260px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth effect */
+}
+
+.image:hover {
+  transform: scale(1.05);        /* Zoom in */
+  filter: brightness(1.1);       /* Slightly brighter */
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4); /* Optional extra glow */
+}
+
+body {
+  position: relative;
+  transition: background-image 0.8s ease-in-out;
+}
+
+
+#main-title,
+#main-desc {
+  transition: opacity 0.3s ease-in-out;
+}
+
+
+@keyframes fadeBg {
+  0% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
